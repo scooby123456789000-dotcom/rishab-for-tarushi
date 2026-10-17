@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Dr. Tarushi ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Georgia,serif;
+ color:#54243b;
+ background:linear-gradient(135deg,#fff0f5,#ffe0eb,#fff7fa);
+ overflow-x:hidden;
+}
+main{max-width:800px;margin:auto;padding:25px 18px}
+.hero{
+ min-height:90vh;
+ display:flex;flex-direction:column;
+ align-items:center;justify-content:center;
+ text-align:center;
+}
+h1{font-size:clamp(42px,10vw,75px);color:#a52e60;font-weight:normal}
+h1 span{display:block;color:#f05b91;font-style:italic}
+h2{text-align:center;color:#b33369;font-weight:normal}
+.subtitle{letter-spacing:3px;font:12px Arial;color:#a65b77}
+button{
+ background:linear-gradient(110deg,#f45188,#c83e78);
+ color:white;border:0;border-radius:40px;
+ padding:15px 25px;font-weight:bold;
+ cursor:pointer;margin:15px;
+}
+section{
+ background:#ffffffd9;
+ border-radius:24px;padding:28px 22px;
+ margin:25px 0;
+ box-shadow:0 10px 35px #b84e7020;
+}
+p{font-size:17px;line-height:1.8}
+.letter{white-space:pre-line;font-size:17px;line-height:2}
+.promises{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.promises div{
+ background:#fff0f5;border-radius:15px;
+ padding:20px;text-align:center;
+}
+.promises b{display:block;color:#d34e83;font-size:25px}
+.photo{
+ height:200px;border:2px dashed #e9a0b8;
+ border-radius:18px;display:flex;
+ justify-content:center;align-items:center;
+ position:relative;overflow:hidden;
+ color:#a65b77;text-align:center;
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:none}
+.photo input{position:absolute;inset:0;opacity:0}
+#secret{display:none;text-align:center}
+.final{font-size:30px;color:#b33369}
+.heart{
+ position:fixed;bottom:-30px;
+ animation:float 7s linear infinite;
+ pointer-events:none;z-index:5;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+@media(max-width:500px){
+ .promises{grid-template-columns:1fr}
+ .letter{font-size:15px}
+}
+</style>
+</head>
+<body>
+
+<main>
+<header class="hero">
+ <div class="subtitle">A LITTLE UNIVERSE MADE FOR YOU</div>
+ <h1>Happy Anniversary,
+ <span>Dr. Tarushi ❤️</span></h1>
+ <p>FROM YOUR RISHAB · WITH ALL MY HEART</p>
+ <button onclick="document.getElementById('letter').scrollIntoView({behavior:'smooth'})">
+ Open Your Surprise 💌
+ </button>
+</header>
+
+<section id="letter">
+<h2>To My Favourite Person 🌷</h2>
+<div class="letter">Tarushi,
+
+I wish I could pause time for a little while, just to look at you and remind you how special you are to me.
+
+You are not just someone I love. You are the person who makes ordinary days feel special, whose smile can make my mood better, and whose presence means more to me than I can ever explain.
+
+I may not always find the perfect words, and I know I won't be perfect every single day. But one thing I never want you to doubt is this:
+
+I CHOOSE YOU. ❤️
+
+I value you, I adore you, and I want to keep making beautiful memories with you.
+
+Thank you for being you.
+Thank you for being my Tarushi.
+
+Aaj, kal, aur har us din mein jo aage aayega — I want you by my side.
+
+Forever yours,
+Rishab ❤️</div>
+</section>
+
+<section>
+<h2>My Little Promises To You ❤️</h2>
+<div class="promises">
+<div><b>♡</b>I will always listen to you.</div>
+<div><b>✿</b>I will celebrate your happiness.</div>
+<div><b>☾</b>I will always make time for you.</div>
+<div><b>∞</b>I will keep choosing us.</div>
+</div>
+</section>
+
+<section>
+<h2>Our Little Memory Corner 📸</h2>
+<p>Tap and add our favourite pictures together.</p>
+<div class="promises">
+<label class="photo">
+Our Favourite Picture
+<input type="file" accept="image/*" onchange="photo(this)">
+<img>
+</label>
+<label class="photo">
+A Beautiful Memory
+<input type="file" accept="image/*" onchange="photo(this)">
+<img>
+</label>
+</div>
+</section>
+
+<section style="text-align:center">
+<h2>One Last Surprise 💝</h2>
+<p>There is something I want you to hear, straight from my heart.</p>
+<button onclick="surprise()">Tap When You're Ready ❤️</button>
+
+<div id="secret">
+<p class="final">
+Tarushi, you're my today, my favourite hello, and the person I hope to make a thousand more anniversaries with. ❤️
+</p>
+<h2>I LOVE YOU SO MUCH BABU 🥹</h2>
+<p>Forever yours — Rishab ❤️</p>
+</div>
+</section>
+
+<p style="text-align:center;color:#a65b77">
+Made with a million feelings ❤️<br>
+Rishab → Dr. Tarushi
+</p>
+</main>
+
+<script>
+function photo(input){
+ if(input.files && input.files[0]){
+  let img=input.parentElement.querySelector('img');
+  img.src=URL.createObjectURL(input.files[0]);
+  img.style.display='block';
+ }
+}
+
+function surprise(){
+ document.getElementById('secret').style.display='block';
+ for(let i=0;i<70;i++){
+  let h=document.createElement('div');
+  h.innerHTML=['❤️','💕','💗','✨','🌸'][Math.floor(Math.random()*5)];
+  h.className='heart';
+  h.style.left=Math.random()*100+'vw';
+  h.style.fontSize=(15+Math.random()*25)+'px';
+  h.style.animationDuration=(3+Math.random()*5)+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+ }
+}
+</script>
+
+</body>
+</html>
